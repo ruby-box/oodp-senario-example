@@ -11,7 +11,12 @@ public class Child {
 	}
 
 	public boolean canYouTurnOnRadio() {
-		if ( age < 10 ) { return false; }
+
+		if ( age < 10 ) {
+			System.out.println("C: 아뇨, 어려서 못켜요.");
+			return false;
+		}
+		System.out.println("C: 네, 켤줄 알아요.");
 
 		return true;
 	}
@@ -21,7 +26,9 @@ public class Child {
 	 * @param radio
 	 */
 	public void turnOnRadio(Radio radio) {
+		System.out.println("C: 라디오야, 너 켜져있니?");
 		if(!radio.isPowerOn()) {
+			System.out.println("C: 라디오를 키겠습니다.");
 			radio.turnOn();
 		}
 	}
@@ -40,6 +47,7 @@ public class Child {
 	 * @return
 	 */
 	public String whatYourName() {
+		System.out.println("C: 제 이름은 " + this.name + "입니다.");
 		return this.name;
 	}
 }

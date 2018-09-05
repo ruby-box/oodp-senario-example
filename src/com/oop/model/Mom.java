@@ -31,13 +31,20 @@ public class Mom {
 	 * @param livingRoom
 	 */
 	public void listenToRadio(LivingRoom livingRoom) {
+		System.out.println("M: 지금부터 라디오를 듣겠습니다.");
+		System.out.println("M: 민수를 찾겠습니다.");
 		//livingRoom을 통해서 민수를 데려온다
 		Child minsu = livingRoom.callChild("Minsu");
+
+		System.out.println("M: 라디오를 찾겠습니다.");
 		Radio radio = livingRoom.requestRadio();
 
+		System.out.println("M: 민수가 라디오를 켤수 있는지 물어보겠습니다.");
 		if ( minsu.canYouTurnOnRadio() ) {
+			System.out.println("M: 민수야, 라디오 켜줄래?");
 			minsu.turnOnRadio(radio);
 		} else {
+			System.out.println("M: 그래.. 민수가 아직 어리지.. 내가 키마.");
 			radio.turnOn();
 		}
 	}

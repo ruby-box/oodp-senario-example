@@ -11,6 +11,11 @@ public class Radio {
 	}
 
 	public boolean isPowerOn() {
+		if(this.powerOn) {
+			System.out.println("R: 저는 켜져 있습니다.");
+		} else {
+			System.out.println("R: 저는 꺼져 있습니다.");
+		}
 		return this.powerOn;
 	}
 
@@ -20,7 +25,9 @@ public class Radio {
 	}
 
 	public void turnOn() {
+		System.out.println("R: 전원을 켜겠습니다.");
 		this.powerOn = true;
+		System.out.println("R: 오늘의 뉴스를 말씀드리겠습니다.....");
 	}
 
 	public int turnVolumeDown() {
@@ -33,4 +40,8 @@ public class Radio {
 		throw new UnsupportedOperationException();
 	}
 
+	public String getName() {
+		System.out.println("R: 제 제품명은 " + this.name + "입니다.");
+		return this.name;
+	}
 }
