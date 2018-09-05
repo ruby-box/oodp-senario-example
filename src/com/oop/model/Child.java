@@ -6,26 +6,35 @@ public class Child {
 	private String name;
 
 	public boolean canYouTurnOnRadio() {
-		// TODO - implement Child.canYouTurnOnRadio
+		if ( age < 10 ) { return false; }
+
+		return true;
+	}
+
+	/**
+	 *
+	 * @param radio
+	 */
+	public void turnOnRadio(Radio radio) {
+		if(!radio.isPowerOn()) {
+			radio.turnOn();
+		}
+	}
+
+	/**
+	 *
+	 * @param radio
+	 * @return
+	 */
+	public int turnVolumeUp(Radio radio) {
 		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 *
-	 * @param Radio
+	 * @return
 	 */
-	public void turnOnRadio(int Radio) {
-		// TODO - implement Child.turnOnRadio
-		throw new UnsupportedOperationException();
+	public String whatYourName() {
+		return this.name;
 	}
-
-	/**
-	 *
-	 * @param Radio
-	 */
-	public int turnVolumeUp(int Radio) {
-		// TODO - implement Child.turnVolumeUp
-		throw new UnsupportedOperationException();
-	}
-
 }

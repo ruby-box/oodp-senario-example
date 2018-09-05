@@ -15,8 +15,7 @@ public class Radio {
 	}
 
 	public void turnOn() {
-		// TODO - implement Radio.turnOn
-		throw new UnsupportedOperationException();
+		this.powerOn = true;
 	}
 
 	public int turnVolumeDown() {

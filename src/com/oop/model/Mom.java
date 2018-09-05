@@ -9,9 +9,9 @@ public class Mom {
 
 	/**
 	 *
-	 * @param LivingRoom
+	 * @param livingRoom
 	 */
-	public void adjustRadioVolume(int LivingRoom) {
+	public void adjustRadioVolume(LivingRoom livingRoom) {
 		// TODO - implement Mom.adjustRadioVolume
 		throw new UnsupportedOperationException();
 	}
@@ -23,11 +23,18 @@ public class Mom {
 
 	/**
 	 *
-	 * @param LivingRoom
+	 * @param livingRoom
 	 */
-	public void listenToRadio(int LivingRoom) {
-		// TODO - implement Mom.listenToRadio
-		throw new UnsupportedOperationException();
+	public void listenToRadio(LivingRoom livingRoom) {
+		//livingRoom을 통해서 민수를 데려온다
+		Child minsu = livingRoom.callChild("Minsu");
+		Radio radio = livingRoom.requestRadio();
+
+		if ( minsu.canYouTurnOnRadio() ) {
+			minsu.turnOnRadio(radio);
+		} else {
+			radio.turnOn();
+		}
 	}
 
 }

@@ -1,21 +1,29 @@
 package com.oop.model;
 
+import java.util.Collection;
+
 public class LivingRoom {
 
 	private String name;
+	public Collection<Child> playingChildren;
+	public Radio radio;
 
 	/**
 	 *
-	 * @param String
+	 * @param name
 	 */
-	public Child callChild(int String) {
-		// TODO - implement LivingRoom.callChild
-		throw new UnsupportedOperationException();
+	public Child callChild(String name) {
+		for ( Child child:playingChildren ) {
+			if ( child.whatYourName().equals(name) ) {
+				return child;
+			}
+		}
+
+		throw new RuntimeException("이름이 맞는 아이가 없습니다. ");
 	}
 
 	public Radio requestRadio() {
-		// TODO - implement LivingRoom.requestRadio
-		throw new UnsupportedOperationException();
+		return this.radio;
 	}
 
 }
