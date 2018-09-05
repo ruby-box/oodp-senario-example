@@ -5,6 +5,11 @@ public class Radio {
 	private String name;
 	private boolean powerOn;
 
+	public Radio(String name) {
+		this.name = name;
+		this.powerOn = false;
+	}
+
 	public boolean isPowerOn() {
 		return this.powerOn;
 	}

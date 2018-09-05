@@ -6,6 +6,11 @@ public class Mom {
 
 	public Collection<Child> son;
 	private String name;
+	private int age;
+
+	public Mom(String name) {
+		this.name = name;
+	}
 
 	/**
 	 *

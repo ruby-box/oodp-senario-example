@@ -5,6 +5,11 @@ public class Child {
 	private int age;
 	private String name;
 
+	public Child(int age, String name) {
+		this.age = age;
+		this.name = name;
+	}
+
 	public boolean canYouTurnOnRadio() {
 		if ( age < 10 ) { return false; }
 

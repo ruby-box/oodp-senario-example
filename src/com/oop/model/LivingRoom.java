@@ -1,5 +1,6 @@
 package com.oop.model;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 public class LivingRoom {
@@ -26,4 +27,15 @@ public class LivingRoom {
 		return this.radio;
 	}
 
+	public void enter(Child child) {
+		if ( playingChildren == null ) {
+			playingChildren = new ArrayList<>();
+		}
+
+		this.playingChildren.add(child);
+	}
+
+	public void setup(Radio radio) {
+		this.radio = radio;
+	}
 }
